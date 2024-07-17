@@ -15,7 +15,8 @@ class PageScrollModels{
 
    async model__1() {
         const totalScrolls = this.getRandomInt(4, 8); 
-        for (let i = 0; i < totalScrolls - 1; i++) {
+        
+        for (let i = 0; i < totalScrolls; i++) {
             const scrollLength = this.getRandomInt(1500, 1700);
             const scrollSpeed = this.getRandomFloat(50 , 150 );
             await this.page.evaluate(async (scrollLength) => {
