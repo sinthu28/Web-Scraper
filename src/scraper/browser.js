@@ -12,9 +12,8 @@ class Browser {
             headless: false
         });
         this.page = await this.browser.newPage();
-        console.log("New Page Created")
     }
-
+         
     async close(){
         await this.browser.close();
         console.log("Browser closed !!")

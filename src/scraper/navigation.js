@@ -1,3 +1,5 @@
+const path = require("path");
+
 class Navigation{
     constructor(page){
         this.page = page;
@@ -5,7 +7,7 @@ class Navigation{
 
     async navigateToUrl(url){
         await this.page.goto(url)
-        console.log("Successfully Navigated!!")
+        await this.page.waitForLoadState('load');
     }
 
     async navigateNextPage(){
